@@ -7,3 +7,5 @@ router.get('/', bookController.index);
 
 // Show
 router.get('/:id', bookController.show);
+
+module.exports = router;
