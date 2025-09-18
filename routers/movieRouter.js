@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const bookController = require("../controllers/movieController");
+const movieController = require("../controllers/movieController");
 
 // Index
-router.get('/', bookController.index);
+router.get('/', movieController.index);
 
 // Show
-router.get('/:id', bookController.show);
+router.get('/:id', movieController.show);
 
 module.exports = router;
