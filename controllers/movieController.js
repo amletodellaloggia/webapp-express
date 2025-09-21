@@ -8,7 +8,13 @@ const index = (req, res) => {
       return res
         .status(500)
         .json({ error: `Errore nell'esecuzione della query: ${err}` });
-    res.send(results);
+    const movies = results.map((movie) => {
+      return {
+        ...movie,
+        image: req.imagePath + movie.image,
+      };
+    });
+    res.send(movies);
   });
 };
 
