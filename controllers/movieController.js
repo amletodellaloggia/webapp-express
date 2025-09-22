@@ -32,6 +32,8 @@ const show = (req, res) => {
     if (resultMovie.length === 0 || resultMovie[0].id === null)
       return res.status(404).json({ error: `Film non trovato.` });
 
+    resultMovie[0].image = req.imagePath + resultMovie[0].image;
+    
     connection.query(sqlReviews, [id], (err, resultReviews) => {
       if (err)
         return res
