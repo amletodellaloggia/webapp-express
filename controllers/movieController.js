@@ -48,7 +48,19 @@ const show = (req, res) => {
   });
 };
 
+const storeReview = (req, res) => {
+  const {id} = req.params;
+  const {text, name, vote} = req.body;
+  const sql = "INSERT INTO reviews (movie_id, name, vote, text) VALUES(?, ?, ?, ?)";
+
+  connection.query(sql, [id, name, vote, text], (err, result) => {
+    if(err) return res.status(500).json({result: false, message: "Errore durante l'inserimento della recensione"});
+    res.status(201).json({result: true, message: "Recensione inserita correttamente"});
+  })
+}
+
 module.exports = {
   index,
   show,
+  storeReview
 };

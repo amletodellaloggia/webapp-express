@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT;
 const movieRouter = require("./routers/movieRouter");
 
+app.use(express.json());
 app.use(cors({origin: process.env.FE_APP}));
 app.use(express.static("public"));
 app.use(imagepathMiddleware);
