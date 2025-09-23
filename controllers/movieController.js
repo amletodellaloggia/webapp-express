@@ -48,6 +48,7 @@ const show = (req, res) => {
   });
 };
 
+// Store Review
 const storeReview = (req, res) => {
   const {id} = req.params;
   const {text, name, vote} = req.body;
