@@ -45,6 +45,22 @@ Miglioriamo l’esperienza dell’utente inserendo
 
 MILESTONE 2 (FRONTEND)
 
-	Creiamo un componente che contenga il form per le recensioni,
-	Inseriamo questo componente nella pagina di dettaglio del film,
+	Creiamo un componente che contenga il form per le recensioni
+	Inseriamo questo componente nella pagina di dettaglio del film
 	All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre
+
+===
+PT IV:
+
+
+Concludiamo migliorando l’esperienza sulla nostra SPA, inserendo un loader.
+
+  Creiamo un componente loader
+  Questo componente deve poter apparire su qualunque pagina della nostra app
+  Creiamo e sfruttiamo un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina,
+
+BONUS:
+
+  Personalizziamo l’aspetto della nostra app col CSS
+
+Buon Lavoro e buon divertimento!
